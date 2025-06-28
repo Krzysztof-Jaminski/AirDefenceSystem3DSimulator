@@ -1,2 +1,79 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Git attributes for Air Defence System 3D Simulator
+
+# Python files
+*.py text eol=lf diff=python
+
+# Configuration files
+*.cfg text eol=lf
+*.ini text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+
+# Documentation
+*.md text eol=lf diff=markdown
+*.txt text eol=lf
+*.rst text eol=lf
+
+# Requirements and dependencies
+requirements.txt text eol=lf
+Pipfile text eol=lf
+Pipfile.lock text eol=lf
+poetry.lock text eol=lf
+
+# Logs and data files
+*.log text eol=lf
+*.csv text eol=lf
+*.dat text eol=lf
+
+# Binary files (should not be diffed)
+*.pyc binary
+*.pyo binary
+*.pyd binary
+*.so binary
+*.dll binary
+*.exe binary
+*.dylib binary
+
+# Image files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.bmp binary
+*.tiff binary
+*.ico binary
+
+# Audio/Video files
+*.mp3 binary
+*.mp4 binary
+*.avi binary
+*.wav binary
+*.flac binary
+
+# Archive files
+*.zip binary
+*.tar binary
+*.gz binary
+*.rar binary
+*.7z binary
+
+# IDE and editor files
+*.swp binary
+*.swo binary
+*~ binary
+
+# Windows specific
+*.lnk binary
+
+# Simulation data files
+*.sim binary
+*.save binary
+*.state binary
+
+# 3D model files (if any)
+*.obj binary
+*.fbx binary
+*.dae binary
+*.blend binary 
