@@ -1,42 +1,8 @@
 # System Obrony Powietrznej - Symulator 3D
 
-## Szybki start
-
-1. **Utwórz i aktywuj środowisko wirtualne (Windows):**
-   ```sh
-   py -m venv venv
-   venv\Scripts\activate
-   ```
-2. **Zainstaluj wymagane biblioteki:**
-   ```sh
-   pip install -r requirements.txt
-   ```
-3. **Uruchom program:**
-   ```sh
-   py main.py
-   ```
-
-## Rozwiązywanie problemów
-
-- Jeśli środowisko venv nie działa, usuń katalog `venv` i utwórz je ponownie:
-  ```sh
-  rmdir /s /q venv
-  py -m venv venv
-  venv\Scripts\activate
-  pip install -r requirements.txt
-  ```
-- Jeśli pojawi się błąd z `pip` lub `matplotlib`, zaktualizuj pip:
-  ```sh
-  python -m pip install --upgrade pip
-  ```
-- Upewnij się, że uruchamiasz program z aktywnym środowiskiem (w terminalu powinno być `(venv)` lub `(venv_new)` przed ścieżką).
-- Jeśli pojawi się błąd o braku Pythona, zainstaluj [Python 3.11+](https://www.python.org/downloads/).
-
----
-
 ## Opis Projektu
 
-System Obrony Powietrznej to zaawansowany symulator 3D, który demonstruje działanie radaru, wykrywanie celów powietrznych oraz ich zestrzeliwanie w czasie rzeczywistym. Projekt wykorzystuje programowanie współbieżne, metaprogramowanie oraz zaawansowane algorytmy przewidywania trajektorii.
+System Obrony Powietrznej to symulator 3D, który demonstruje działanie radaru, wykrywanie celów powietrznych oraz ich zestrzeliwanie w czasie rzeczywistym. Projekt wykorzystuje programowanie współbieżne, metaprogramowanie oraz algorytmy przewidywania trajektorii.
 
 ## Założenia Projektu
 
@@ -58,7 +24,7 @@ Symulacja realistycznego systemu obrony powietrznej z następującymi komponenta
 
 ### Struktura Katalogów
 ```
-SDSIZCL/
+AirDefenceSystem3DSimulator/
 ├── config.py                 # Konfiguracja systemu
 ├── main.py                   # Główny punkt wejścia
 ├── core/                     # Logika biznesowa
@@ -88,53 +54,8 @@ SDSIZCL/
 
 ## Diagram Klas
 
-```mermaid
-classDiagram
-    class AirTarget {
-        +int id
-        +float x, y, z
-        +float speed
-        +float camouflage
-        +bool alive
-        +bool is_marked
-        +bool left_field
-        +deque last_scanned_positions
-        +move()
-    }
-    
-    class Tracker {
-        +list targets
-        +threading.Lock lock
-        +update_positions()
-        +scan_targets()
-        +get_alive_targets()
-    }
-    
-    class Shooter {
-        +Tracker tracker
-        +dict last_predictions
-        +int shots_fired
-        +int shots_missed
-        +shoot_targets()
-        +get_stats()
-    }
-    
-    class Visualizer {
-        +Tracker tracker
-        +animate()
-    }
-    
-    class Marker {
-        +Tracker tracker
-        +detect_targets()
-        +mark_targets()
-    }
-    
-    Tracker --> AirTarget : manages
-    Shooter --> Tracker : uses
-    Visualizer --> Tracker : displays
-    Marker --> Tracker : marks
-```
+![ClassDiagram (2)](https://github.com/user-attachments/assets/72c851d2-5db0-4cb8-aa29-93f09396694c)
+
 
 ## Działanie Programu
 
@@ -330,7 +251,8 @@ Program wyświetla następujące statystyki w czasie rzeczywistym:
 
 ## Zrzut Ekranu
 
-[Tu będzie zrzut ekranu z działającego programu]
+![image](https://github.com/user-attachments/assets/dc9268b5-14fd-46da-95cd-ea4206bf16a6)
+
 
 ## Podsumowanie
 
