@@ -2,7 +2,7 @@
 
 ## Opis Projektu
 
-System Obrony Powietrznej to zaawansowany symulator 3D, który demonstruje działanie radaru, wykrywanie celów powietrznych oraz ich zestrzeliwanie w czasie rzeczywistym. Projekt wykorzystuje programowanie współbieżne, metaprogramowanie oraz zaawansowane algorytmy przewidywania trajektorii.
+System Obrony Powietrznej to symulator 3D, który demonstruje działanie radaru, wykrywanie celów powietrznych oraz ich zestrzeliwanie w czasie rzeczywistym. Projekt wykorzystuje programowanie współbieżne, metaprogramowanie oraz algorytmy przewidywania trajektorii.
 
 ## Założenia Projektu
 
@@ -24,7 +24,7 @@ Symulacja realistycznego systemu obrony powietrznej z następującymi komponenta
 
 ### Struktura Katalogów
 ```
-SDSIZCL/
+AirDefenceSystem3DSimulator/
 ├── config.py                 # Konfiguracja systemu
 ├── main.py                   # Główny punkt wejścia
 ├── core/                     # Logika biznesowa
