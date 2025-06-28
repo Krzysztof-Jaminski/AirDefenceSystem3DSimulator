@@ -1,5 +1,39 @@
 # System Obrony Powietrznej - Symulator 3D
 
+## Szybki start
+
+1. **Utwórz i aktywuj środowisko wirtualne (Windows):**
+   ```sh
+   py -m venv venv
+   venv\Scripts\activate
+   ```
+2. **Zainstaluj wymagane biblioteki:**
+   ```sh
+   pip install -r requirements.txt
+   ```
+3. **Uruchom program:**
+   ```sh
+   py main.py
+   ```
+
+## Rozwiązywanie problemów
+
+- Jeśli środowisko venv nie działa, usuń katalog `venv` i utwórz je ponownie:
+  ```sh
+  rmdir /s /q venv
+  py -m venv venv
+  venv\Scripts\activate
+  pip install -r requirements.txt
+  ```
+- Jeśli pojawi się błąd z `pip` lub `matplotlib`, zaktualizuj pip:
+  ```sh
+  python -m pip install --upgrade pip
+  ```
+- Upewnij się, że uruchamiasz program z aktywnym środowiskiem (w terminalu powinno być `(venv)` lub `(venv_new)` przed ścieżką).
+- Jeśli pojawi się błąd o braku Pythona, zainstaluj [Python 3.11+](https://www.python.org/downloads/).
+
+---
+
 ## Opis Projektu
 
 System Obrony Powietrznej to zaawansowany symulator 3D, który demonstruje działanie radaru, wykrywanie celów powietrznych oraz ich zestrzeliwanie w czasie rzeczywistym. Projekt wykorzystuje programowanie współbieżne, metaprogramowanie oraz zaawansowane algorytmy przewidywania trajektorii.
