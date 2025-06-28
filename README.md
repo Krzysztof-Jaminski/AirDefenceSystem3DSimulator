@@ -262,5 +262,3 @@ System Obrony Powietrznej demonstruje zaawansowane techniki programowania:
 - **Algorytmy predykcji** - przewidywanie trajektorii
 - **Wizualizacja 3D** - interaktywny interfejs
 - **Architektura modułowa** - czytelna struktura kodu
-
-Projekt stanowi doskonały przykład praktycznego zastosowania zaawansowanych koncepcji programistycznych w realistycznej symulacji systemu obrony powietrznej. 
